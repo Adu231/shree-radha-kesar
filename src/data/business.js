@@ -3,8 +3,8 @@ export const business = {
   shortName: 'Shree Radha Kesar',
   tagline: 'A considered kesar experience.',
   description: 'A considered kesar experience rooted in the colour, aroma and quiet abundance of Kashmir.',
-  whatsappNumber: '',
-  phoneNumbers: [],
+  whatsappNumber: '918482914463',
+  phoneNumbers: ['+91 84829 14463'],
   email: '',
   instagram: '',
 }

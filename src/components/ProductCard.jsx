@@ -25,12 +25,27 @@ export default function ProductCard({ product, notify }) {
           <span className="sample-label">Sample prices</span>
         </div>
         <div className="weight-list" aria-label="Available pack sizes">
-          {product.variants.map((variant) => <button type="button" key={variant.id} className={selectedId === variant.id ? 'is-selected' : ''} onClick={() => setSelectedId(variant.id)} aria-pressed={selectedId === variant.id}><span>{variant.weight}</span><small>{formatCurrency(variant.price)}</small></button>)}
+          {product.variants.map((variant) => (
+            <button
+              type="button"
+              key={variant.id}
+              className={selectedId === variant.id ? 'is-selected' : ''}
+              onClick={() => setSelectedId(variant.id)}
+              aria-pressed={selectedId === variant.id}
+            >
+              <span>{variant.weight}</span>
+              <small>{formatCurrency(variant.price)}</small>
+            </button>
+          ))}
         </div>
         <div className="product-card__selection"><span className="selection-dot" /> {selectedVariant.weight} pack selected</div>
         <div className="product-card__actions">
-          <Link to={`/kesar/${product.id}`} className="button button--outline">View details <ArrowUpRight size={16} /></Link>
-          <button className="button button--text" onClick={handleOrder}><WhatsAppIcon size={17} /> WhatsApp</button>
+          <button className="button button--burgundy" onClick={handleOrder}>
+            <WhatsAppIcon size={17} /> Order on WhatsApp <ArrowUpRight size={15} />
+          </button>
+          <Link to={`/kesar/${product.id}`} className="button button--outline">
+            View details
+          </Link>
         </div>
       </div>
     </article>
