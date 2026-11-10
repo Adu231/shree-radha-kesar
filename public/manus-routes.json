@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home — Shree Radha Kesar Supplier" },
+    { "path": "/kesar", "title": "Our Kesar — Shree Radha Kesar Supplier" },
+    { "path": "/kesar/:productId", "title": "Product Details — Shree Radha Kesar Supplier" },
+    { "path": "/about", "title": "About Us — Shree Radha Kesar Supplier" },
+    { "path": "/contact", "title": "Contact — Shree Radha Kesar Supplier" }
+  ]
+}
